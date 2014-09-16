@@ -4,7 +4,7 @@ version := "1.0"
 
 organization := "com.arunma"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.11.2"
 
 resolvers ++=
         Seq("repo" at "http://repo.typesafe.com/typesafe/releases/")
