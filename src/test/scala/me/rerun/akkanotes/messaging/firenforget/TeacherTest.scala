@@ -1,13 +1,14 @@
-package me.rerun.akkanotes.messaging
+package me.rerun.akkanotes.messaging.firenforget
 
+import org.scalatest.BeforeAndAfterAll
 import org.scalatest.MustMatchers
 import org.scalatest.WordSpecLike
-import TeacherProtocol.QuoteRequest
+
 import akka.actor.ActorSystem
 import akka.actor.Props
 import akka.actor.actorRef2Scala
 import akka.testkit.TestKit
-import org.scalatest.BeforeAndAfterAll
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 
 class TeacherTest extends TestKit(ActorSystem("QuoteSystem"))
   with WordSpecLike
@@ -18,7 +19,7 @@ class TeacherTest extends TestKit(ActorSystem("QuoteSystem"))
 
     "print a quote when a QuoteRequest message is sent" in {
 
-      val teacherRef = system.actorOf(Props[Teacher])
+      val teacherRef = system.actorOf(Props[TeacherPrintActor])
       teacherRef ! QuoteRequest
 
     }

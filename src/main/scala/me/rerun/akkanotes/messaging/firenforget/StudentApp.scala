@@ -1,8 +1,10 @@
-package me.rerun.akkanotes.messaging
+package me.rerun.akkanotes.messaging.firenforget
 
 import akka.actor.ActorSystem
 import akka.actor.Props
-import TeacherProtocol._
+import akka.actor.actorRef2Scala
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
+
 
 /**
  * Let's have the student as a simple runnable App now instead of an Actor for the first part.
@@ -13,8 +15,10 @@ import TeacherProtocol._
 
 object StudentApp extends App{
 
+  
+  
   val actorSystem=ActorSystem("QuoteSystem")
-  val teacherActorRef=actorSystem.actorOf(Props[Teacher])
+  val teacherActorRef=actorSystem.actorOf(Props[TeacherPrintActor])
   
   teacherActorRef!QuoteRequest
   
