@@ -17,7 +17,7 @@ object StudentApp extends App{
 
   
   
-  val actorSystem=ActorSystem("QuoteSystem")
+  val actorSystem=ActorSystem("StudentTeacherSystem")
   val teacherActorRef=actorSystem.actorOf(Props[TeacherPrintActor])
   
   teacherActorRef!QuoteRequest

@@ -9,10 +9,17 @@ object DriverApp extends App{
   
   //Initialize the ActorSystem
   val system=ActorSystem("StudentTeacherSystem")
+  
+  //construct the Student Actor
   val studentRef=system.actorOf(Props[StudentActor], "studentActor")
+  
+  //send a message to the Student Actor
   studentRef!InitSignal
   
-  Thread.sleep (2000) //Let's wait for a couple of seconds before we shut down the system
+  //Let's wait for a couple of seconds before we shut down the system
+  Thread.sleep (2000) 
+  
+  //Shut down the ActorSystem. 
   system.shutdown()
   
 

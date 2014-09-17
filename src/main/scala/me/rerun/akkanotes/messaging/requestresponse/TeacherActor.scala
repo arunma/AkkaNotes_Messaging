@@ -8,7 +8,7 @@ import akka.actor.actorRef2Scala
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 
 /*
- * Teacher with Logging
+ * The Philosophy Teacher
  * 
  */
 
