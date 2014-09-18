@@ -19,7 +19,7 @@ class TeacherTest extends TestKit(ActorSystem("QuoteSystem"))
 
     "print a quote when a QuoteRequest message is sent" in {
 
-      val teacherRef = system.actorOf(Props[TeacherPrintActor])
+      val teacherRef = system.actorOf(Props[TeacherActor])
       teacherRef ! QuoteRequest
 
     }

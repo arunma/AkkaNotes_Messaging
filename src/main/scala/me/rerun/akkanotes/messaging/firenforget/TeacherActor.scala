@@ -1,8 +1,9 @@
 package me.rerun.akkanotes.messaging.firenforget
 
-import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._;
-import akka.actor.Actor
 import scala.util.Random
+
+import akka.actor.Actor
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 
 /*
  * Your Teacher Actor class. 
@@ -13,7 +14,7 @@ import scala.util.Random
  * 
  */
 
-class TeacherPrintActor extends Actor {
+class TeacherActor extends Actor {
 
   val quotes = List(
     "Moderation is for cowards",
@@ -27,8 +28,10 @@ class TeacherPrintActor extends Actor {
 
       import util.Random
 
-      //Print a random element (for now)
-      println(quotes(Random.nextInt(quotes.size)))
+      //Get a random Quote from the list and construct a response
+      val quoteResponse=QuoteResponse(quotes(Random.nextInt(quotes.size)))
+      
+      println (quoteResponse)
 
     }
 
