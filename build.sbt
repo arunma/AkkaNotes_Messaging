@@ -1,4 +1,4 @@
-name := "GrepActor"
+name := "AkkaNotes_Messaging"
 
 version := "1.0"
 

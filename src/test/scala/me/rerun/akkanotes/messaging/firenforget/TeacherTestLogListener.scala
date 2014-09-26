@@ -29,7 +29,7 @@ class TeacherTestLogListener extends TestKit(ActorSystem("QuoteSystem", ConfigFa
 
     "be verifiable via TestEventListener in response to a QuoteRequest that is sent" in {
 
-      val teacherRef = system.actorOf(Props[Teacher2WithLogging])
+      val teacherRef = system.actorOf(Props[TeacherLogActor])
 
       EventFilter.info(message = "Quote printed", occurrences = 1) intercept {
         teacherRef ! QuoteRequest

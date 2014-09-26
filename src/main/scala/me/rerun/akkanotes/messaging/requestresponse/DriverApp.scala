@@ -3,6 +3,7 @@ package me.rerun.akkanotes.messaging.requestresponse
 import akka.actor.ActorSystem
 import akka.actor.Props
 import me.rerun.akkanotes.messaging.protocols.StudentProtocol._
+import akka.actor.ActorRef
 
 object DriverApp extends App{
   
@@ -11,7 +12,7 @@ object DriverApp extends App{
   val system=ActorSystem("StudentTeacherSystem")
   
   //construct the Student Actor
-  val studentRef=system.actorOf(Props[StudentActor], "studentActor")
+  val studentRef:ActorRef=system.actorOf(Props[StudentActor], "studentActor")
   
   //send a message to the Student Actor
   studentRef!InitSignal

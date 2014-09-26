@@ -21,7 +21,7 @@ class StudentActor extends Actor with ActorLogging {
      * The teacher actor on receipt of the QuoteRequest responds with a QuoteResponse 
      */
     case InitSignal=> {
-      val teacherRef=context.actorOf(Props[TeacherActor], "teacherActor") //Spawn a Teacher Actor as a child
+      val teacherRef=context.system.actorOf(Props[TeacherActor], "teacherActor") //Create Teacher Actor
       teacherRef!QuoteRequest
     }
     

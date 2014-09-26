@@ -10,7 +10,7 @@ import akka.actor.ActorLogging
  * 
  */
 
-class Teacher2WithLogging extends Actor with ActorLogging {
+class TeacherLogActor extends Actor with ActorLogging {
 
   val quotes = List(
     "Moderation is for cowards",
@@ -24,10 +24,11 @@ class Teacher2WithLogging extends Actor with ActorLogging {
 
       import util.Random
 
-      //Print a random element (for now)
-      log.info(quotes(Random.nextInt(quotes.size)))
+      //get a random element (for now)
+      val quoteResponse=QuoteResponse(quotes(Random.nextInt(quotes.size)))
+      log.info(quoteResponse.toString())
 
-      log.info("Quote printed") //This message is just to assert from the testcase      
+      //log.info("Quote printed") //This message is just to assert from the testcase      
 
     }
 

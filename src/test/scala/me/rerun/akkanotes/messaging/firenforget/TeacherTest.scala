@@ -30,7 +30,7 @@ class TeacherTest extends TestKit(ActorSystem("QuoteSystem"))
 
     "log a quote when a QuoteRequest message is sent" in {
 
-      val teacherRef = system.actorOf(Props[Teacher2WithLogging])
+      val teacherRef = system.actorOf(Props[TeacherLogActor])
       teacherRef ! QuoteRequest
 
     }
