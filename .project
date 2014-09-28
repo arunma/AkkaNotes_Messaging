@@ -1,5 +1,5 @@
 <projectDescription>
-  <name>GrepActor</name>
+  <name>AkkaNotes_Messaging</name>
   <buildSpec>
     <buildCommand>
       <name>org.scala-ide.sdt.core.scalabuilder</name>

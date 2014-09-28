@@ -10,6 +10,7 @@ import akka.actor.Props
 import akka.actor.actorRef2Scala
 import akka.testkit.TestKit
 import akka.testkit.EventFilter
+import akka.testkit.TestActorRef
 
 /**
  * This is a little extension to the previous testcase. 
@@ -20,7 +21,7 @@ import akka.testkit.EventFilter
  * The EventFilter intercept method does exactly this.  
  * 
  */
-class TeacherTestLogListener extends TestKit(ActorSystem("QuoteSystem", ConfigFactory.parseString("""akka.loggers = ["akka.testkit.TestEventListener"]""")))
+class TeacherTestLogListener extends TestKit(ActorSystem("UniversityMessageSystem", ConfigFactory.parseString("""akka.loggers = ["akka.testkit.TestEventListener"]""")))
   with WordSpecLike
   with MustMatchers
   with BeforeAndAfterAll {

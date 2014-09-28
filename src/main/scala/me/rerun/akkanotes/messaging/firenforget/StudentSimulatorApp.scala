@@ -19,7 +19,8 @@ object StudentSimulatorApp extends App{
   val actorSystem=ActorSystem("UniversityMessageSystem")
   
   //construct the Teacher Actor Ref
-  val teacherActorRef=actorSystem.actorOf(Props[TeacherActor])
+  //val teacherActorRef=actorSystem.actorOf(Props[TeacherActor])
+  val teacherActorRef=actorSystem.actorOf(Props[TeacherLogActor])
   
   //send a message to the Teacher Actor
   teacherActorRef!QuoteRequest
@@ -31,3 +32,5 @@ object StudentSimulatorApp extends App{
   actorSystem.shutdown()
   
 } 
+
+

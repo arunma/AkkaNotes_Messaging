@@ -10,7 +10,7 @@ import akka.actor.ActorLogging
  * 
  */
 
-class TeacherLogActor extends Actor with ActorLogging {
+class TeacherLogReceiveActor extends Actor with ActorLogging {
 
    val quotes = List(
     "Moderation is for cowards",
