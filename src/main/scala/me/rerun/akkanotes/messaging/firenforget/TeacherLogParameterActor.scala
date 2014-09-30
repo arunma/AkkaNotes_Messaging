@@ -6,17 +6,13 @@ import akka.actor.Actor
 import akka.actor.ActorLogging
 
 /*
- * Teacher with Logging
+ * Teacher with parameters
  * 
  */
 
-class TeacherLogReceiveActor extends Actor with ActorLogging {
+class TeacherLogParameterActor (quotes:List[String]) extends Actor with ActorLogging {
 
-   val quotes = List(
-    "Moderation is for cowards",
-    "Anything worth doing is worth overdoing",
-    "The trouble is you think you have time",
-    "You never gonna know if you never even try")
+  lazy val _quotes=quotes
 
   def receive = {
 
@@ -25,8 +21,8 @@ class TeacherLogReceiveActor extends Actor with ActorLogging {
       import util.Random
 
       //get a random element (for now)
-      val quoteResponse=QuoteResponse(quotes(Random.nextInt(quotes.size)))
-      //log.info(quoteResponse.toString())
+      val quoteResponse=QuoteResponse(_quotes(Random.nextInt(_quotes.size)))
+      log.info(quoteResponse.toString())
 
       //log.info("Quote printed") //This message is just to assert from the testcase      
 
@@ -34,6 +30,6 @@ class TeacherLogReceiveActor extends Actor with ActorLogging {
 
   }
       
-  def quoteList=quotes
+  def quoteList=_quotes
 
 }
