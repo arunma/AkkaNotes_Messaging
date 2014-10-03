@@ -32,7 +32,7 @@ class TeacherTestLogListener extends TestKit(ActorSystem("UniversityMessageSyste
 
       val teacherRef = system.actorOf(Props[TeacherLogActor])
 
-      EventFilter.info(message = "Quote printed", occurrences = 1) intercept {
+      EventFilter.info(start = "QuoteResponse", occurrences = 1) intercept {
         teacherRef ! QuoteRequest
       }
 

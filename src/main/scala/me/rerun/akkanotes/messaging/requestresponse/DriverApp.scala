@@ -9,7 +9,7 @@ object DriverApp extends App{
   
   
   //Initialize the ActorSystem
-  val system=ActorSystem("StudentTeacherSystem")
+  val system=ActorSystem("UniversityMessageSystem")
   
   //construct the Student Actor
   val studentRef:ActorRef=system.actorOf(Props[StudentActor], "studentActor")
