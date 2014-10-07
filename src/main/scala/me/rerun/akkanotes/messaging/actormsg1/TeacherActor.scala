@@ -3,7 +3,8 @@ package me.rerun.akkanotes.messaging.actormsg1
 import scala.util.Random
 
 import akka.actor.Actor
-import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol.QuoteRequest
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol.QuoteResponse
 
 /*
  * Your Teacher Actor class. 

@@ -4,6 +4,7 @@ import akka.actor.ActorSystem
 import akka.actor.Props
 import akka.actor.actorRef2Scala
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
+import me.rerun.akkanotes.messaging.logtest2.TeacherLogActor
 
 
 /**

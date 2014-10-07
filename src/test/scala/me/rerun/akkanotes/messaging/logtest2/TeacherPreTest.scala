@@ -3,8 +3,11 @@ package me.rerun.akkanotes.messaging.logtest2
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.MustMatchers
 import org.scalatest.WordSpecLike
+
 import akka.actor.ActorSystem
+import akka.testkit.TestActorRef
 import akka.testkit.TestKit
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol.QuoteRequest
 
 class TeacherPreTest extends TestKit(ActorSystem("UniversityMessageSystem"))
   with WordSpecLike

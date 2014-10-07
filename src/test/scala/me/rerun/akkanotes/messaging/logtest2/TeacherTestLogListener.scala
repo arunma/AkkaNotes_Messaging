@@ -7,6 +7,8 @@ import org.scalatest.WordSpecLike
 import com.typesafe.config.ConfigFactory
 import akka.actor.ActorSystem
 import akka.testkit.TestKit
+import akka.actor.Props
+import akka.testkit.EventFilter
 
 /**
  * This is a little extension to the previous testcase. 

@@ -10,6 +10,7 @@ import akka.testkit.TestKit
 import me.rerun.akkanotes.messaging.actormsg1.TeacherLogParameterActor
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol.QuoteRequest
 import me.rerun.akkanotes.messaging.actormsg1.TeacherActor
+import akka.testkit.EventFilter
 
 class TeacherTest extends TestKit(ActorSystem("UniversityMessageSystem", ConfigFactory.parseString("""akka.loggers = ["akka.testkit.TestEventListener"]""")))
   with WordSpecLike

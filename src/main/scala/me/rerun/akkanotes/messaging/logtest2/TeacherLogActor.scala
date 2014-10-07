@@ -1,9 +1,11 @@
 package me.rerun.akkanotes.messaging.logtest2
 
-import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 import scala.util.Random
+
 import akka.actor.Actor
 import akka.actor.ActorLogging
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol.QuoteRequest
+import me.rerun.akkanotes.messaging.protocols.TeacherProtocol.QuoteResponse
 
 /*
  * Teacher with Logging
