@@ -1,4 +1,4 @@
-package me.rerun.akkanotes.messaging.firenforget
+package me.rerun.akkanotes.messaging.actormsg1
 
 import akka.actor.ActorSystem
 import akka.actor.Props

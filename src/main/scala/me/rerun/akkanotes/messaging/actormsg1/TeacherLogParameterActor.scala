@@ -1,4 +1,4 @@
-package me.rerun.akkanotes.messaging.firenforget
+package me.rerun.akkanotes.messaging.actormsg1
 
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 import scala.util.Random

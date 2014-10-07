@@ -1,4 +1,4 @@
-package me.rerun.akkanotes.messaging.firenforget
+package me.rerun.akkanotes.messaging.logtest2
 
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.MustMatchers
@@ -7,9 +7,9 @@ import com.typesafe.config.ConfigFactory
 import akka.actor.ActorSystem
 import akka.testkit.TestActorRef
 import akka.testkit.TestKit
+import me.rerun.akkanotes.messaging.actormsg1.TeacherLogParameterActor
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol.QuoteRequest
-import akka.testkit.EventFilter
-import akka.actor.Props
+import me.rerun.akkanotes.messaging.actormsg1.TeacherActor
 
 class TeacherTest extends TestKit(ActorSystem("UniversityMessageSystem", ConfigFactory.parseString("""akka.loggers = ["akka.testkit.TestEventListener"]""")))
   with WordSpecLike

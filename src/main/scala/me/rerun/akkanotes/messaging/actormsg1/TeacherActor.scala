@@ -1,18 +1,20 @@
-package me.rerun.akkanotes.messaging.requestresponse
+package me.rerun.akkanotes.messaging.actormsg1
 
 import scala.util.Random
 
 import akka.actor.Actor
-import akka.actor.ActorLogging
-import akka.actor.actorRef2Scala
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 
 /*
- * The Philosophy Teacher
+ * Your Teacher Actor class. 
+ * 
+ * The class could use refinement by way of  
+ * using ActorLogging which uses the EventBus of the Actor framework
+ * instead of the plain old System out
  * 
  */
 
-class TeacherActor extends Actor with ActorLogging {
+class TeacherActor extends Actor {
 
   val quotes = List(
     "Moderation is for cowards",
@@ -27,11 +29,9 @@ class TeacherActor extends Actor with ActorLogging {
       import util.Random
 
       //Get a random Quote from the list and construct a response
-      val quoteResponse = QuoteResponse(quotes(Random.nextInt(quotes.size)))
-
-      log.info ("QuoteRequest received. Sending response to Student")
-      //respond back to the Student who is the original sender of QuoteRequest
-      sender ! quoteResponse
+      val quoteResponse=QuoteResponse(quotes(Random.nextInt(quotes.size)))
+      
+      println (quoteResponse)
 
     }
 

@@ -1,4 +1,4 @@
-package me.rerun.akkanotes.messaging.firenforget
+package me.rerun.akkanotes.messaging.logtest2
 
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 import org.scalatest.BeforeAndAfterAll
@@ -6,11 +6,7 @@ import org.scalatest.MustMatchers
 import org.scalatest.WordSpecLike
 import com.typesafe.config.ConfigFactory
 import akka.actor.ActorSystem
-import akka.actor.Props
-import akka.actor.actorRef2Scala
 import akka.testkit.TestKit
-import akka.testkit.EventFilter
-import akka.testkit.TestActorRef
 
 /**
  * This is a little extension to the previous testcase. 

@@ -1,4 +1,4 @@
-package me.rerun.akkanotes.messaging.firenforget
+package me.rerun.akkanotes.messaging.logtest2
 
 import me.rerun.akkanotes.messaging.protocols.TeacherProtocol._
 import scala.util.Random
@@ -10,7 +10,7 @@ import akka.actor.ActorLogging
  * 
  */
 
-class TeacherLogReceiveActor extends Actor with ActorLogging {
+class TeacherLogActor extends Actor with ActorLogging {
 
    val quotes = List(
     "Moderation is for cowards",
@@ -26,7 +26,7 @@ class TeacherLogReceiveActor extends Actor with ActorLogging {
 
       //get a random element (for now)
       val quoteResponse=QuoteResponse(quotes(Random.nextInt(quotes.size)))
-      //log.info(quoteResponse.toString())
+      log.info(quoteResponse.toString())
 
       //log.info("Quote printed") //This message is just to assert from the testcase      
 
